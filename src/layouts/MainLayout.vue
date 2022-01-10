@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh lpR lFr" >
+  <q-layout view="lHh lpR lFr" style="background-color:#1D1D1D">
 
     <q-header reveal elevated class=" text-white" height-hint="98" style="background-color:rgb(88 32 149)">
       <q-toolbar>
@@ -10,7 +10,7 @@
             <img src="../assets/cerveja.png">
           </q-avatar>
           Beer Games
-          
+
         </q-toolbar-title>
          <q-select outlined v-model="model" :options="options" label="Linguagem" />
       </q-toolbar>
@@ -19,10 +19,10 @@
         <q-route-tab to="/tags"  label="Modos de Jogo" />
         <q-route-tab to="/changelog" label="Changelog" />
       </q-tabs>
-     
+
     </q-header>
 
-    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" elevated>
+    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" elevated style="background-color:#1D1D1D">
       <!-- drawer content -->
       <q-card dark bordered class="bg-grey-9 my-card">
       <q-card-section>
@@ -37,11 +37,11 @@
        <div class="row">
 
 
-   
-   <q-btn type="a" href="https://instagram.com/cwbgamestudio" label="Instagram"></q-btn>
-  
 
-     
+   <q-btn type="a" href="https://instagram.com/cwbgamestudio" label="Instagram"></q-btn>
+
+
+
    <q-btn type="a" href="https://cwbgamestudio.com" label="Website"></q-btn>
 
 
@@ -50,10 +50,10 @@
       </q-card-section>
     </q-card>
 
-    
+
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container >
       <router-view />
     </q-page-container>
 
@@ -65,7 +65,7 @@ import { ref } from 'vue'
 
 export default {
   setup () {
-   
+
     const leftDrawerOpen = ref(false)
 
     return {
@@ -76,11 +76,11 @@ export default {
     }
   },
    created() {
- 
+
   fetch("https://api.npoint.io/841d5e98dcf7cb9d960b/0")
     .then(response => response.json())
     .then(data => (this.attDate = data));
-    
+
 },
    data() {
       return {

@@ -1,29 +1,29 @@
 <template>
   <div class="q-pa-md row">
- 
+
 
     <q-select
-    color="purple" outlined label-color="purple"
+    color="purple" outlined label-color="black"
       label="Modos de Jogo"
       transition-show="jump-up "
       transition-hide="jump-up"
       filled
       v-model="gamemode"
       :options="options"
-      style="width: 250px"
+      style="width: 250px ;background-color:#9C27B0"
         emit-value
          map-options
     />
-     <q-btn flat @click=" regrasRow = !regrasRow, regraVdd = false, regraprov = false, regraEn = false" style="background-color:#582095"><b>Regras</b></q-btn>
-      
+     <!-- <q-btn flat @click=" regrasRow = !regrasRow, regraVdd = false, regraprov = false, regraEn = false" style="background-color:#582095"><b>Regras</b></q-btn> -->
+
   </div>
 
-<div  v-show="regrasRow" class="row"> 
-  <q-btn flat @click=" regraEn = !regraEn, regraVdd = false, regraprov = false" style="background-color:#582095"><b>Eu nunca</b></q-btn> 
-  
+<div  v-show="regrasRow" class="row">
+  <q-btn flat @click=" regraEn = !regraEn, regraVdd = false, regraprov = false" style="background-color:#582095"><b>Eu nunca</b></q-btn>
+
   <q-btn flat @click=" regraVdd = !regraVdd, regraEn = false, regraprov = false" style="background-color:#582095"><b>Verdade ou Desafio</b></q-btn>
         <q-btn flat @click=" regraprov = !regraprov, regraEn = false, regraVdd = false" style="background-color:#582095"><b>Quem é mais provável?</b></q-btn>
-  
+
   </div>
   <q-card-section v-show="regraEn">
 Clique em próximo para novas frases, todos que já fizeram a ação da frase mostrada devem tomar um shot.
@@ -72,7 +72,7 @@ export default defineComponent({
           label: "O que você prefere?",
           value: "Oqvcprefere"
         },
-    
+
       ],
     };
   },
