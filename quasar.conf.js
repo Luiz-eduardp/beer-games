@@ -81,6 +81,7 @@ module.exports = configure(function(ctx) {
 
         // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
         framework: {
+
             config: {
                 brand: {
                     primary: "#19d178",
